@@ -9,4 +9,8 @@ body{
     border: 2px solid grey;
     width: 860px;
     height: 860px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
 }
