@@ -14,3 +14,7 @@ body{
     justify-content: space-between;
     align-items: space-between;
 }
+
+.color{
+    background-color: black;
+}

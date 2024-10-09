@@ -21,5 +21,9 @@ for (let i = 0; i<totalSquares; i++){
     square.style.border = "2px solid grey";
     square.style.boxSizing= "border-box";
     container.appendChild(square);
+    //add hover event to change color
+    square.addEventListener("mouseover", ()=>{
+        square.classList.add("color");
+    });
 }
 
