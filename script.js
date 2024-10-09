@@ -19,8 +19,8 @@ function generateGrid(numSquaresAcross){
     const container = document.querySelector("#container");
 
     //calculate width of new squares, always round down to prevent overflow
-    let squareWidth = Math.floor(gridDimension/numSquaresAcross);
-    console.log(squareWidth);
+    let squareWidth = gridDimension/numSquaresAcross;
+    console.log(squareWidth + " before modification");
 
     //create divs with correct size
     for (let i = 0; i<totalSquares; i++){
@@ -56,14 +56,13 @@ function getInput(){
     //get number from user, do not proceed until it is correct
     let input = prompt("Enter the number of squares across");
     let numSquares = parseInt(input);
-    while (numSquares === NaN || numSquares > 100 || numSquares < 0){
+    while (!numSquares || numSquares > 100 || numSquares < 0){
         input = prompt("Enter the number of squares across");
         numSquares = parseInt(input);
     }
 
     //in case of decimal value entered
     numSquares = Math.floor(numSquares);
-    console.log(numSquares);
     return numSquares;
 }
 
